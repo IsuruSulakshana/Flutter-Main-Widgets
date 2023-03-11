@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_main_widgets/widgets/column/column.dart';
 import 'package:flutter_main_widgets/widgets/container/container.dart';
+import 'package:flutter_main_widgets/widgets/row/row.dart';
 import 'package:flutter_main_widgets/widgets/scaffold/scaffold.dart';
 
 void main() {
@@ -19,6 +21,8 @@ class MyApp extends StatelessWidget {
       ),
       //home: const MyScaffold(),
       //home: const MyContainer(),
+      //home: const MyRow(),
+      //home: const MyColumn(),
     );
   }
 }
