@@ -1,28 +1,32 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_main_widgets/screen/myScreen.dart';
 import 'package:flutter_main_widgets/widgets/column/column.dart';
 import 'package:flutter_main_widgets/widgets/container/container.dart';
 import 'package:flutter_main_widgets/widgets/row/row.dart';
 import 'package:flutter_main_widgets/widgets/scaffold/scaffold.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+
+import 'package:device_preview/device_preview.dart';
+
+void main() => runApp(
+  DevicePreview(
+    enabled: !kReleaseMode,
+    builder: (context) => MyApp(), // Wrap your app
+  ),
+);
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      //home: const MyScaffold(),
-      //home: const MyContainer(),
-      //home: const MyRow(),
-      //home: const MyColumn(),
+      debugShowCheckedModeBanner: false,
+      useInheritedMediaQuery: true,
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
+      home: const myScreen(),
     );
   }
 }
