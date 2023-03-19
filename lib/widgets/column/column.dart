@@ -14,17 +14,62 @@ class MyColumn extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Container(
-              width: 100,
+              width: 300,
               height: 100,
               color: Colors.red,
             ),
             Container(
-              width: 100,
+              width: 300,
               height: 100,
               color: Colors.green,
             ),
             Container(
-              width: 100,
+              width: 300,
+              height: 100,
+              color: Colors.blue,
+            ),
+            Container(
+              width: 300,
+              height: 100,
+              color: Colors.red,
+            ),
+            Container(
+              width: 300,
+              height: 100,
+              color: Colors.green,
+            ),
+            Container(
+              width: 300,
+              height: 100,
+              color: Colors.blue,
+            ),
+            Container(
+              width: 300,
+              height: 100,
+              color: Colors.red,
+            ),
+            Container(
+              width: 300,
+              height: 100,
+              color: Colors.green,
+            ),
+            Container(
+              width: 300,
+              height: 100,
+              color: Colors.blue,
+            ),
+            Container(
+              width: 300,
+              height: 100,
+              color: Colors.red,
+            ),
+            Container(
+              width: 300,
+              height: 100,
+              color: Colors.green,
+            ),
+            Container(
+              width: 300,
               height: 100,
               color: Colors.blue,
             ),
