@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_main_widgets/screen/myProfileScreen.dart';
 import 'package:flutter_main_widgets/screen/myScreen.dart';
 import 'package:flutter_main_widgets/screen/widgetTestingScreen.dart';
 import 'package:flutter_main_widgets/widgets/column/column.dart';
@@ -27,7 +28,8 @@ class MyApp extends StatelessWidget {
       builder: DevicePreview.appBuilder,
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
-      home: const WidgetTesting(),
+      home: const Profile(),
+      //home: const WidgetTesting(),
       //home: const myScreen(),
     );
   }
