@@ -259,7 +259,7 @@ class _WidgetOfTheDayBannerState extends State<WidgetOfTheDayBanner>
   Widget build(BuildContext context) {
     return Container(
       width: 400,
-      height: 280,
+      height: 200,
       decoration: BoxDecoration(
         gradient: const LinearGradient(
           colors: [
@@ -269,7 +269,7 @@ class _WidgetOfTheDayBannerState extends State<WidgetOfTheDayBanner>
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
-        borderRadius: BorderRadius.circular(50),
+        borderRadius: const BorderRadius.only(topLeft: Radius.zero, topRight: Radius.zero),
         boxShadow: [
           BoxShadow(
             color: Colors.grey.withOpacity(0.8),
@@ -289,7 +289,7 @@ class _WidgetOfTheDayBannerState extends State<WidgetOfTheDayBanner>
         child: Stack(
           children: [
             Positioned(
-              top: 30,
+              top: 5,
               left: 20,
               child: Container(
                 decoration: BoxDecoration(
@@ -311,7 +311,7 @@ class _WidgetOfTheDayBannerState extends State<WidgetOfTheDayBanner>
               ),
             ),
             Positioned(
-              bottom: 70,
+              bottom: 80,
               left: 20,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

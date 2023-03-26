@@ -28,7 +28,7 @@ class _MyTextFormState extends State<MyTextForm> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
+            const Text(
               'Please enter your details:',
               style: TextStyle(
                 fontSize: 20.0,
@@ -36,10 +36,10 @@ class _MyTextFormState extends State<MyTextForm> {
                 color: Colors.blue,
               ),
             ),
-            SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
             TextFormField(
               controller: _nameController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Name',
                 border: OutlineInputBorder(),
                 focusedBorder: OutlineInputBorder(
@@ -56,11 +56,11 @@ class _MyTextFormState extends State<MyTextForm> {
                 return null;
               },
             ),
-            SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
             TextFormField(
               controller: _emailController,
               keyboardType: TextInputType.emailAddress,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Email',
                 border: OutlineInputBorder(),
                 focusedBorder: OutlineInputBorder(
@@ -80,18 +80,17 @@ class _MyTextFormState extends State<MyTextForm> {
                 return null;
               },
             ),
-            SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
             ElevatedButton(
               onPressed: () {
                 if (_formKey.currentState!.validate()) {
-                  // Submit the form
                 }
               },
-              child: Text('Submit'),
               style: ElevatedButton.styleFrom(
                 primary: Colors.blue,
                 onPrimary: Colors.white,
               ),
+              child: const Text('Submit'),
             ),
           ],
         ),

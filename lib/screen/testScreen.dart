@@ -14,22 +14,38 @@ class Profile extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text("Text Form"),
+        title: const Text(
+          "Text Form",
+          style: TextStyle(
+            fontSize: 20.0,
+          ),
+        ),
+        leading: const Icon(
+          Icons.arrow_back_ios,
+          size: 20.0,
+        ),
+        actions: const [
+          Padding(
+            padding: EdgeInsets.only(right: 20.0),
+            child: Icon(
+              Icons.menu_outlined
+            ),
+          )
+        ],
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const MyForm(),
+          //const MyForm(),
           //const MyTextForm(),
           //const PopTextForm(),
-          //AdvancedTextForm(),
+          const AdvancedTextForm(),
 
           //Banner
           //AnimatedBanner(),
           Column(
             children: const [
-             // WidgetOfTheDayBanner(),
-              SizedBox(height: 10.0,)
+              WidgetOfTheDayBanner(),
             ],
           ),
         ],
