@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_main_widgets/widgets/listtile/listtile.dart';
+import 'package:flutter_main_widgets/widgets/textForm/1)%20textForm.dart';
+import 'package:flutter_main_widgets/widgets/textForm/2)%20textForm.dart';
+import 'package:flutter_main_widgets/widgets/textForm/3)%20textForm.dart';
+import 'package:flutter_main_widgets/widgets/textForm/4)%20textForm.dart';
 
 class Profile extends StatelessWidget {
   const Profile({Key? key}) : super(key: key);
@@ -9,13 +13,11 @@ class Profile extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text("Life Meet"),
+        title: const Text("Text Form"),
       ),
       body: Column(
         children: const [
-        ThirdListTile(),
-        ThirdListTile(),
-        ThirdListTile(),
+        AdvancedTextForm(),
         ],
       ),
     );
