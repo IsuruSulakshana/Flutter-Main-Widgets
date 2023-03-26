@@ -25,85 +25,88 @@ class _PopTextFormState extends State<PopTextForm> {
 
   @override
   Widget build(BuildContext context) {
-    return Form(
-      key: _formKey,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          TextFormField(
-            controller: _controller1,
-            decoration: InputDecoration(
-              labelText: 'Field 1',
-              border: OutlineInputBorder(),
+    return Padding(
+      padding: const EdgeInsets.all(10.0),
+      child: Form(
+        key: _formKey,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            TextFormField(
+              controller: _controller1,
+              decoration: InputDecoration(
+                labelText: 'Field 1',
+                border: OutlineInputBorder(),
+              ),
+              validator: (value) {
+                if (value!.isEmpty) {
+                  return 'Please enter Field 1';
+                }
+                return null;
+              },
             ),
-            validator: (value) {
-              if (value!.isEmpty) {
-                return 'Please enter Field 1';
-              }
-              return null;
-            },
-          ),
-          SizedBox(height: 16),
-          TextFormField(
-            controller: _controller2,
-            decoration: InputDecoration(
-              labelText: 'Field 2',
-              border: OutlineInputBorder(),
+            SizedBox(height: 16),
+            TextFormField(
+              controller: _controller2,
+              decoration: InputDecoration(
+                labelText: 'Field 2',
+                border: OutlineInputBorder(),
+              ),
+              validator: (value) {
+                if (value!.isEmpty) {
+                  return 'Please enter Field 2';
+                }
+                return null;
+              },
             ),
-            validator: (value) {
-              if (value!.isEmpty) {
-                return 'Please enter Field 2';
-              }
-              return null;
-            },
-          ),
-          SizedBox(height: 16),
-          TextFormField(
-            controller: _controller3,
-            decoration: InputDecoration(
-              labelText: 'Field 3',
-              border: OutlineInputBorder(),
+            SizedBox(height: 16),
+            TextFormField(
+              controller: _controller3,
+              decoration: InputDecoration(
+                labelText: 'Field 3',
+                border: OutlineInputBorder(),
+              ),
+              validator: (value) {
+                if (value!.isEmpty) {
+                  return 'Please enter Field 3';
+                }
+                return null;
+              },
             ),
-            validator: (value) {
-              if (value!.isEmpty) {
-                return 'Please enter Field 3';
-              }
-              return null;
-            },
-          ),
-          SizedBox(height: 16),
-          Center(
-            child: _isSubmitting
-                ? CircularProgressIndicator()
-                : RaisedButton(
-                    onPressed: () async {
-                      if (_formKey.currentState!.validate()) {
-                        setState(() {
-                          _isSubmitting = true;
-                        });
-                        // Simulate data processing
-                        await Future.delayed(Duration(seconds: 2));
-                        setState(() {
-                          _isSubmitting = false;
-                        });
-                        // Show success popup
-                        showDialog(
-                          context: context,
-                          builder: (context) => AlertDialog(
-                            title: Icon(
-                              Icons.check_circle,
-                              color: Colors.green,
-                              size: 64,
+            SizedBox(height: 16),
+            Center(
+              child: _isSubmitting
+                  ? CircularProgressIndicator()
+                  : RaisedButton(
+                      onPressed: () async {
+                        if (_formKey.currentState!.validate()) {
+                          setState(() {
+                            _isSubmitting = true;
+                          });
+                          // Simulate data processing
+                          await Future.delayed(Duration(seconds: 2));
+                          setState(() {
+                            _isSubmitting = false;
+                          });
+                          // Show success popup
+                          showDialog(
+                            context: context,
+                            builder: (context) => AlertDialog(
+                              title: Icon(
+                                Icons.check_circle,
+                                color: Colors.green,
+                                size: 64,
+                              ),
+                              content: Text('Your data has been submitted!'),
                             ),
-                            content: Text('Your data has been submitted!'),
-                          ),
-                        );
-                      }
-                    },
-                    child: Text('Submit'),
-                  ),
-          ),
-        ],
+                          );
+                        }
+                      },
+                      child: Text('Submit'),
+                    ),
+            ),
+          ],
+        ),
       ),
     );
   }

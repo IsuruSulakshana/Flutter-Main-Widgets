@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_main_widgets/widgets/banner/widget_of_the_day.dart';
 import 'package:flutter_main_widgets/widgets/listtile/listtile.dart';
 import 'package:flutter_main_widgets/widgets/textForm/1)%20textForm.dart';
 import 'package:flutter_main_widgets/widgets/textForm/2)%20textForm.dart';
@@ -15,11 +16,24 @@ class Profile extends StatelessWidget {
         centerTitle: true,
         title: const Text("Text Form"),
       ),
-      body:
-        const MyForm(),
-        //const MyTextForm(),
-        //const PopTextForm(),
-        //const AdvancedTextForm(),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          const MyForm(),
+          //const MyTextForm(),
+          //const PopTextForm(),
+          //AdvancedTextForm(),
+
+          //Banner
+          //AnimatedBanner(),
+          Column(
+            children: const [
+             // WidgetOfTheDayBanner(),
+              SizedBox(height: 10.0,)
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
