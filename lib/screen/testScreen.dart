@@ -15,11 +15,11 @@ class Profile extends StatelessWidget {
         centerTitle: true,
         title: const Text("Text Form"),
       ),
-      body: Column(
-        children: const [
-        AdvancedTextForm(),
-        ],
-      ),
+      body:
+        const MyForm(),
+        //const MyTextForm(),
+        //const PopTextForm(),
+        //const AdvancedTextForm(),
     );
   }
 }
