@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_main_widgets/widgets/banner/widget_of_the_day.dart';
 import 'package:flutter_main_widgets/widgets/listtile/listtile.dart';
+import 'package:flutter_main_widgets/widgets/radio/1)radio.dart';
+import 'package:flutter_main_widgets/widgets/radio/2)radio.dart';
 import 'package:flutter_main_widgets/widgets/textForm/1)%20textForm.dart';
 import 'package:flutter_main_widgets/widgets/textForm/2)%20textForm.dart';
 import 'package:flutter_main_widgets/widgets/textForm/3)%20textForm.dart';
@@ -13,9 +15,12 @@ class Profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        foregroundColor: Color.fromARGB(255, 252, 251, 251),
+        shadowColor: Color.fromARGB(255, 11, 160, 224),
+        backgroundColor: Color.fromARGB(255, 200, 15, 194),
         centerTitle: true,
         title: const Text(
-          "Text Form",
+          "Radio Button",
           style: TextStyle(
             fontSize: 20.0,
           ),
@@ -36,10 +41,9 @@ class Profile extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          //const MyForm(),
-          //const MyTextForm(),
-          //const PopTextForm(),
-          const AdvancedTextForm(),
+          //GenderRadio(),
+          MyRadio(),
+
 
           //Banner
           //AnimatedBanner(),

@@ -259,11 +259,11 @@ class _WidgetOfTheDayBannerState extends State<WidgetOfTheDayBanner>
   Widget build(BuildContext context) {
     return Container(
       width: 400,
-      height: 200,
+      height: 300,
       decoration: BoxDecoration(
         gradient: const LinearGradient(
           colors: [
-            Color(0xFF0072ff),
+            Color.fromARGB(255, 175, 7, 170),
             Color(0xFF00c6ff),
           ],
           begin: Alignment.topLeft,
@@ -351,7 +351,7 @@ class _WidgetOfTheDayBannerState extends State<WidgetOfTheDayBanner>
                       top: 60.0,
                       left: 70.0,
                       child: Text(
-                  "4",
+                  "5",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 30.0,
