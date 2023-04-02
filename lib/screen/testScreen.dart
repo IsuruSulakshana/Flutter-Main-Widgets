@@ -17,7 +17,7 @@ class Profile extends StatelessWidget {
       appBar: AppBar(
         foregroundColor: Color.fromARGB(255, 252, 251, 251),
         shadowColor: Color.fromARGB(255, 11, 160, 224),
-        backgroundColor: Color.fromARGB(255, 200, 15, 194),
+        backgroundColor: Color.fromARGB(255, 15, 162, 188),
         centerTitle: true,
         title: const Text(
           "Radio Button",
@@ -29,31 +29,8 @@ class Profile extends StatelessWidget {
           Icons.arrow_back_ios,
           size: 20.0,
         ),
-        actions: const [
-          Padding(
-            padding: EdgeInsets.only(right: 20.0),
-            child: Icon(
-              Icons.menu_outlined
-            ),
-          )
-        ],
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          //GenderRadio(),
-          MyRadio(),
-
-
-          //Banner
-          //AnimatedBanner(),
-          Column(
-            children: const [
-              WidgetOfTheDayBanner(),
-            ],
-          ),
-        ],
-      ),
+      body: WidgetOfTheDayBanner(),
     );
   }
 }

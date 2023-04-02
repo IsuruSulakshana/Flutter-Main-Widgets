@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_main_widgets/widgets/radio/2)radio.dart';
 
 class WidgetOfTheDay extends StatelessWidget {
   const WidgetOfTheDay({Key? key}) : super(key: key);
@@ -259,12 +260,13 @@ class _WidgetOfTheDayBannerState extends State<WidgetOfTheDayBanner>
   Widget build(BuildContext context) {
     return Container(
       width: 400,
-      height: 300,
+      height: 1000,
       decoration: BoxDecoration(
         gradient: const LinearGradient(
           colors: [
-            Color.fromARGB(255, 175, 7, 170),
-            Color(0xFF00c6ff),
+            Color.fromARGB(255, 9, 217, 228),
+            Color.fromARGB(255, 77, 94, 101),
+            Color.fromARGB(255, 9, 217, 228),
           ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
@@ -278,93 +280,102 @@ class _WidgetOfTheDayBannerState extends State<WidgetOfTheDayBanner>
           ),
         ],
       ),
-      child: AnimatedBuilder(
-        animation: _animation,
-        builder: (context, child) {
-          return Transform.translate(
-            offset: Offset(0, 100 * _animation.value),
-            child: child,
-          );
-        },
-        child: Stack(
-          children: [
-            Positioned(
-              top: 5,
-              left: 20,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.2),
-                  borderRadius: BorderRadius.circular(30),
-                ),
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 20,
-                  vertical: 8,
-                ),
-                child: const Text(
-                  "TextForm",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
-                  ),
-                ),
+      child: Stack(
+        children: [
+          const Positioned(
+                top: 200,
+                left: 5,
+                child: MyRadio(),
               ),
-            ),
-            Positioned(
-              bottom: 80,
-              left: 20,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
-                  Text(
-                    "Widget of the Day",
+          AnimatedBuilder(
+          animation: _animation,
+          builder: (context, child) {
+            return Transform.translate(
+              offset: Offset(0, 100 * _animation.value),
+              child: child,
+            );
+          },
+          child: Stack(
+            children: [
+              Positioned(
+                bottom: 250,
+                left: 20,
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.2),
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 20,
+                    vertical: 8,
+                  ),
+                  child: const Text(
+                    "Radio Button",
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 32,
                       fontWeight: FontWeight.bold,
+                      fontSize: 16,
                     ),
                   ),
-                  SizedBox(height: 16),
-                  Text(
-                    "Check out our latest widget!",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                    ),
-                  ),
-                ],
+                ),
               ),
-            ),
-            Positioned(
-              right: -50,
-              bottom: -50,
-              child: Container(
-                width: 200,
-                height: 200,
-                decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.2),
-                  shape: BoxShape.circle,
-                ),
-                child: Stack(
+              Positioned(
+                bottom: 100,
+                left: 20,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
-                    Positioned(
-                      top: 60.0,
-                      left: 70.0,
-                      child: Text(
-                  "5",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 30.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                    )
+                    Text(
+                      "Widget of the Day",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 32,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 16),
+                    Text(
+                      "Check out our latest widget!",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                      ),
+                    ),
                   ],
                 ),
               ),
-            ),
-          ],
+              Positioned(
+                right: -50,
+                bottom: -50,
+                child: Container(
+                  width: 200,
+                  height: 200,
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.2),
+                    shape: BoxShape.circle,
+                  ),
+                  child: Stack(
+                    children: const [
+                      Positioned(
+                        top: 60.0,
+                        left: 70.0,
+                        child: Text(
+                    "5",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
+      ],
       ),
     );
   }
