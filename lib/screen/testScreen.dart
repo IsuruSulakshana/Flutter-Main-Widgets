@@ -14,22 +14,22 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        foregroundColor: Color.fromARGB(255, 252, 251, 251),
-        shadowColor: Color.fromARGB(255, 11, 160, 224),
-        backgroundColor: Color.fromARGB(255, 15, 162, 188),
-        centerTitle: true,
-        title: const Text(
-          "Radio Button",
-          style: TextStyle(
-            fontSize: 20.0,
-          ),
-        ),
-        leading: const Icon(
-          Icons.arrow_back_ios,
-          size: 20.0,
-        ),
-      ),
+      // appBar: AppBar(
+      //   foregroundColor: Color.fromARGB(255, 252, 251, 251),
+      //   shadowColor: Color.fromARGB(255, 58, 185, 240),
+      //   backgroundColor: Color.fromARGB(255, 23, 95, 108),
+      //   centerTitle: true,
+      //   title: const Text(
+      //     "Radio Button",
+      //     style: TextStyle(
+      //       fontSize: 20.0,
+      //     ),
+      //   ),
+      //   leading: const Icon(
+      //     Icons.arrow_back_ios,
+      //     size: 20.0,
+      //   ),
+      // ),
       body: WidgetOfTheDayBanner(),
     );
   }

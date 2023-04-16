@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_main_widgets/widgets/customAppBar.dart/customAppBar.dart';
 import 'package:flutter_main_widgets/widgets/radio/2)radio.dart';
 
 class WidgetOfTheDay extends StatelessWidget {
@@ -282,6 +283,13 @@ class _WidgetOfTheDayBannerState extends State<WidgetOfTheDayBanner>
       ),
       child: Stack(
         children: [
+          const Positioned(
+                top: 20,
+                left: 5,
+                child: CustomAppBar(
+                  
+                )
+              ),
           const Positioned(
                 top: 200,
                 left: 5,
