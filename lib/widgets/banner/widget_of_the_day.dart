@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_main_widgets/widgets/buttons/flatButton.dart';
 import 'package:flutter_main_widgets/widgets/customAppBar.dart/customAppBar.dart';
 import 'package:flutter_main_widgets/widgets/radio/2)radio.dart';
 
@@ -265,9 +266,9 @@ class _WidgetOfTheDayBannerState extends State<WidgetOfTheDayBanner>
       decoration: BoxDecoration(
         gradient: const LinearGradient(
           colors: [
-            Color.fromARGB(255, 9, 217, 228),
-            Color.fromARGB(255, 77, 94, 101),
-            Color.fromARGB(255, 9, 217, 228),
+            Color.fromARGB(255, 228, 9, 221),
+            Color.fromARGB(255, 24, 167, 233),
+            Color.fromARGB(255, 228, 9, 202),
           ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
