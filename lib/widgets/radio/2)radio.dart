@@ -89,7 +89,7 @@ class _MyRadioState extends State<MyRadio> {
                               );
                             },
                             inactiveIcon: null,
-                            inactiveBorderColor: Color.fromARGB(255, 247, 0, 255),
+                            inactiveBorderColor: Color.fromARGB(255, 8, 240, 39),
                             activeBorderColor: Color.fromARGB(255, 247, 4, 239),
                             radioColor: Color.fromARGB(255, 16, 86, 105),
                           ),

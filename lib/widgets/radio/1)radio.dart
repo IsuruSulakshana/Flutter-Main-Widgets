@@ -44,7 +44,7 @@ class _GenderRadioState extends State<GenderRadio> {
                       });
                     },
                   ),
-                  Text('Male'),
+                  const Text('Male'),
                 ],
               ),
               Row(
@@ -58,14 +58,14 @@ class _GenderRadioState extends State<GenderRadio> {
                       });
                     },
                   ),
-                  Text('Female'),
+                  const Text('Female'),
                 ],
               ),
-              SizedBox(height: 20.0),
+              const SizedBox(height: 20.0),
               Center(
                 child: Text(
                   'You selected $_selectedGender.',
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 18.0,
                     fontWeight: FontWeight.bold,
                   ),
