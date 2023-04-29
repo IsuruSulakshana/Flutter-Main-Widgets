@@ -47,11 +47,30 @@ class _MyTabViewState extends State<MyTabView> with SingleTickerProviderStateMix
           Center(child: Text('Tab 3')),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // Add your code here
-        },
-        child: const Icon(Icons.add),
+      floatingActionButton: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          FloatingActionButton(
+            onPressed: (){
+              _tabController.animateTo(0);
+            },
+            child: const Icon(Icons.looks_one),
+          ),
+          const SizedBox(height: 15.0,),
+          FloatingActionButton(
+            onPressed: (){
+              _tabController.animateTo(1);
+            },
+            child: const Icon(Icons.looks_two),
+          ),
+          const SizedBox(height: 15.0,),
+          FloatingActionButton(
+            onPressed: (){
+              _tabController.animateTo(2);
+            },
+            child: const Icon(Icons.looks_3),
+          ),
+        ],
       ),
     );
   }
