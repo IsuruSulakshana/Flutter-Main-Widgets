@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
       builder: DevicePreview.appBuilder,
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
-      home: const FacebookTabView(),
+      home: const MyTabView(),
       //home: const WidgetTesting(),
       //home: const myScreen(),
     );
