@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_main_widgets/widgets/banner/widget_of_the_day.dart';
 import 'package:flutter_main_widgets/widgets/gridView/1)gridView.dart';
+import 'package:flutter_main_widgets/widgets/gridView/2)gridView.dart';
 import 'package:flutter_main_widgets/widgets/listtile/listtile.dart';
 import 'package:flutter_main_widgets/widgets/radio/1)radio.dart';
 import 'package:flutter_main_widgets/widgets/radio/2)radio.dart';

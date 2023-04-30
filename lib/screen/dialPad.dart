@@ -1,56 +1,4 @@
 import 'package:flutter/material.dart';
-
-class DialKey extends StatelessWidget {
-  final String number;
-  final String letters;
-  final ValueChanged<String> onKeyPressed;
-  
-  const DialKey({Key? key, required this.number, required this.letters, required this.onKeyPressed}) : super(key: key);
-  
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        width: 80,
-        height: 80,
-        decoration: BoxDecoration(
-          color: const Color.fromARGB(255, 18, 79, 86),
-          borderRadius: BorderRadius.circular(100.0),
-          border: Border.all(color: const Color.fromARGB(255, 15, 170, 157), width: 3.0)
-        ),
-        child: FloatingActionButton(
-          onPressed: () {
-            if (onKeyPressed != null) {
-              onKeyPressed(number);
-            }
-          },
-          backgroundColor: const Color.fromARGB(255, 18, 112, 147).withOpacity(0.5),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                '$number',
-                style: const TextStyle(
-                    color: Color.fromARGB(255, 255, 255, 255),
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold),
-              ),
-              Text(
-                '$letters',
-                style: const TextStyle(
-                    color: Color.fromARGB(255, 24, 183, 188),
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold),
-              )
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-
 class DialPad extends StatefulWidget {
   const DialPad({Key? key}) : super(key: key);
 
@@ -79,30 +27,22 @@ class _DialPadState extends State<DialPad> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Dial Pad'),
-        backgroundColor: const Color.fromARGB(255, 18, 134, 138),
+        backgroundColor: Color.fromARGB(255, 13, 56, 58),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const SizedBox(height: 200.0),
-            Container(
-              width: 350,
-              height: 70,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(18.0),
-                border: Border.all(color: const Color.fromARGB(255, 30, 137, 139), width: 5.0)
-              ),
-              child: Center(
+            const SizedBox(height: 130.0),
+              Center(
                 child: Text(
                   _phoneNumber,
                   style: const TextStyle(
-                    fontSize: 34,
+                    fontSize: 40,
                     color: Color.fromARGB(255, 171, 239, 238),
                     ),
                 ),
               ),
-            ),
             const SizedBox(height: 40),
             GridView.count(
               crossAxisCount: 3,
@@ -171,10 +111,73 @@ class _DialPadState extends State<DialPad> {
                 ),
               ],
             ),
+            const SizedBox(height: 20.0),
+            IconButton(
+              onPressed: (){}, 
+              icon: const Icon(
+                Icons.call,
+                size: 50.0,
+                color: Color.fromARGB(255, 22, 96, 100),
+              ),
+            ),
           ],
         ),
       ),
-      backgroundColor: const Color.fromARGB(255, 24, 101, 107),
+      backgroundColor: Color.fromARGB(255, 11, 43, 45),
+    );
+  }
+}
+
+class DialKey extends StatelessWidget {
+  final String number;
+  final String letters;
+  final ValueChanged<String> onKeyPressed;
+  
+  const DialKey({Key? key, 
+  required this.number, 
+  required this.letters, 
+  required this.onKeyPressed}) : super(key: key);
+  
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        width: 80,
+        height: 80,
+        decoration: BoxDecoration(
+          color: const Color.fromARGB(255, 18, 79, 86),
+          borderRadius: BorderRadius.circular(100.0),
+        ),
+        child: FloatingActionButton(
+          onPressed: () {
+            if (onKeyPressed != null) {
+              onKeyPressed(number);
+            }
+          },
+          backgroundColor: Color.fromARGB(255, 16, 85, 86).withOpacity(0.5),
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  number,
+                  style: const TextStyle(
+                      color: Color.fromARGB(255, 255, 255, 255),
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  letters,
+                  style: const TextStyle(
+                      color: Color.fromARGB(255, 24, 183, 188),
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold),
+                )
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
