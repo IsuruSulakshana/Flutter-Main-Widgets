@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_main_widgets/screen/1)%20Screen.dart';
 import 'package:flutter_main_widgets/screen/dialPad.dart';
 import 'package:flutter_main_widgets/screen/testScreen.dart';
 import 'package:flutter_main_widgets/screen/myScreen.dart';
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
       builder: DevicePreview.appBuilder,
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
-      home: const DialPad(),
+      home: MyHomePage(),
       //home: const WidgetTesting(),
       //home: const myScreen(),
     );
