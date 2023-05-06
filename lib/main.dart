@@ -5,6 +5,7 @@ import 'package:flutter_main_widgets/screen/dialPad.dart';
 import 'package:flutter_main_widgets/screen/testScreen.dart';
 import 'package:flutter_main_widgets/screen/myScreen.dart';
 import 'package:flutter_main_widgets/screen/widgetTestingScreen.dart';
+import 'package:flutter_main_widgets/widgets/bottomSheet/1)%20bottomSheet.dart';
 import 'package:flutter_main_widgets/widgets/column/column.dart';
 import 'package:flutter_main_widgets/widgets/container/container.dart';
 import 'package:flutter_main_widgets/widgets/row/row.dart';
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
       builder: DevicePreview.appBuilder,
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
-      home: const Profile(),
+      home: const BottomSheetWidget(),
       //home: const WidgetTesting(),
       //home: const myScreen(),
     );
