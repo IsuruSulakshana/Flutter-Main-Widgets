@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
       builder: DevicePreview.appBuilder,
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
-      home: MyHomePage(),
+      home: const Profile(),
       //home: const WidgetTesting(),
       //home: const myScreen(),
     );
