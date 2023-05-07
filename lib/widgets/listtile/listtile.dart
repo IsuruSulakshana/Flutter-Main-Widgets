@@ -97,3 +97,28 @@ class _ThirdListTileState extends State<ThirdListTile> {
     );
   }
 }
+
+class fff extends StatefulWidget {
+  const fff({Key? key}) : super(key: key);
+
+  @override
+  State<fff> createState() => _fffState();
+}
+
+class _fffState extends State<fff> {
+  @override
+  Widget build(BuildContext context) {
+
+    return Scaffold(
+      appBar: AppBar(title: const Text("Bottom Sheet"),),
+      body: const Center(child: Text("Body"),),
+      bottomSheet: Container(
+        color: Colors.black,
+        height: 200.0,
+        child: const Center(child: Text("This is Bottom Sheet"),),
+      ),
+    );
+
+    
+  }
+}
