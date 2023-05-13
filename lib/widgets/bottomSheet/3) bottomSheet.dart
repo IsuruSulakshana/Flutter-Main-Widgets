@@ -41,7 +41,9 @@ class _CustomBottomSheetState extends State<CustomBottomSheet>
             ),
           ),
           clipBehavior: Clip.antiAliasWithSaveLayer,
-          onClosing: () {},
+          onClosing: () {
+            print("Close bottom sheet");
+          },
           builder: (BuildContext context) {
             return Container(
               decoration: BoxDecoration(
