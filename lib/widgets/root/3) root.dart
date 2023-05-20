@@ -1,15 +1,13 @@
-// ignore_for_file: library_private_types_in_public_api
-
 import 'package:flutter/material.dart';
 
-class Root1 extends StatefulWidget {
-  const Root1({Key? key}) : super(key: key);
+class MyRoot extends StatefulWidget {
+  const MyRoot({Key? key}) : super(key: key);
 
   @override
-  _Root1State createState() => _Root1State();
+  State<MyRoot> createState() => _MyRootState();
 }
 
-class _Root1State extends State<Root1> {
+class _MyRootState extends State<MyRoot> {
   int _currentIndex = 0;
 
   final List<Widget> _screens = [
@@ -35,17 +33,17 @@ class _Root1State extends State<Root1> {
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Home',
+            label: "Home",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.search),
-            label: 'Search',
+            label: "Search",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            label: 'Profile',
+            label: "profile",
           ),
-        ],
+        ]
       ),
     );
   }

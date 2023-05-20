@@ -5,8 +5,10 @@ class Root2 extends StatefulWidget {
   _Root2State createState() => _Root2State();
 }
 
-class _Root2State extends State<Root2> with TickerProviderStateMixin {
+class _Root2State extends State<Root2> {
   int _currentIndex = 0;
+  double _opacity = 1.0;
+  Duration _animationDuration = Duration(milliseconds: 300);
 
   final List<Widget> _screens = [
     Screen1(),
@@ -14,137 +16,78 @@ class _Root2State extends State<Root2> with TickerProviderStateMixin {
     Screen3(),
   ];
 
-  late AnimationController _animationController;
-  late Animation<double> _transitionAnimation;
-
-  @override
-  void initState() {
-    super.initState();
-    _animationController = AnimationController(
-      vsync: this,
-      duration: Duration(milliseconds: 300),
-    );
-    _transitionAnimation =
-        Tween<double>(begin: 0.0, end: 1.0).animate(_animationController);
-  }
-
-  @override
-  void dispose() {
-    _animationController.dispose();
-    super.dispose();
-  }
-
-  void _onTabTapped(int index) {
-    if (index != _currentIndex) {
-      setState(() {
-        _currentIndex = index;
-      });
-      _animationController.reset();
-      _animationController.forward();
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Advanced Bottom Navigation Example'),
+        title: const Text('Bottom Navigation Example'),
       ),
-      body: AnimatedBuilder(
-        animation: _animationController,
-        builder: (BuildContext context, Widget? child) {
-          return Stack(
-            children: [
-              for (int i = 0; i < _screens.length; i++)
-                _buildScreen(i, _transitionAnimation.value),
-            ],
-          );
-        },
+      body: AnimatedOpacity(
+        opacity: _opacity,
+        duration: _animationDuration,
+        child: _screens[_currentIndex],
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
-        onTap: _onTabTapped,
-        items: [
+        onTap: (int index) {
+          setState(() {
+            _opacity = 0.0; // Fade out animation
+          });
+          Future.delayed(_animationDuration, () {
+            setState(() {
+              _currentIndex = index;
+              _opacity = 1.0; // Fade in animation
+            });
+          });
+        },
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Screen 1',
+            label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.search),
-            label: 'Screen 2',
+            label: 'Search',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            label: 'Screen 3',
+            label: 'Profile',
           ),
         ],
-      ),
-    );
-  }
-
-  Widget _buildScreen(int index, double animationValue) {
-    final bool active = index == _currentIndex;
-    final double inactiveScale = 0.8;
-    final double inactiveElevation = 6.0;
-    final double activeElevation = 12.0;
-
-    return IgnorePointer(
-      ignoring: !active,
-      child: Opacity(
-        opacity: active ? 1.0 : animationValue,
-        child: Transform.scale(
-          scale: active ? 1.0 : inactiveScale,
-          child: Material(
-            elevation: active ? activeElevation : inactiveElevation,
-            child: _screens[index],
-          ),
-        ),
       ),
     );
   }
 }
 
 class Screen1 extends StatelessWidget {
+  const Screen1({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.red,
-      child: Center(
-        child: Text(
-          'Screen 1',
-          style: TextStyle(color: Colors.white, fontSize: 24.0),
-        ),
-      ),
+    return const Center(
+      child: Text('Home'),
     );
   }
 }
 
 class Screen2 extends StatelessWidget {
+  const Screen2({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.blue,
-      child: Center(
-        child: Text(
-          'Screen 2',
-          style: TextStyle(color: Colors.white, fontSize: 24.0),
-        ),
-      ),
+    return const Center(
+      child: Text('Search Here'),
     );
   }
 }
 
 class Screen3 extends StatelessWidget {
+  const Screen3({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.green,
-      child: Center(
-        child: Text(
-          'Screen 3',
-          style: TextStyle(color: Colors.white, fontSize: 24.0),
-        ),
-      ),
+    return const Center(
+      child: Text('Profile'),
     );
   }
 }
