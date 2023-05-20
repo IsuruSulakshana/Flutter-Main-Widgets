@@ -11,6 +11,7 @@ import 'package:flutter_main_widgets/widgets/bottomSheet/3)%20bottomSheet.dart';
 import 'package:flutter_main_widgets/widgets/bottomSheet/4)%20bottomSheet.dart';
 import 'package:flutter_main_widgets/widgets/column/column.dart';
 import 'package:flutter_main_widgets/widgets/container/container.dart';
+import 'package:flutter_main_widgets/widgets/root/2)%20root.dart';
 import 'package:flutter_main_widgets/widgets/row/row.dart';
 import 'package:flutter_main_widgets/widgets/scaffold/scaffold.dart';
 
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
       builder: DevicePreview.appBuilder,
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
-      home: const FullBottomSheet(),
+      home: Root1(),
       //home: const WidgetTesting(),
       //home: const myScreen(),
     );
