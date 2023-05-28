@@ -21,19 +21,19 @@ class CustomAppBar extends StatelessWidget {
             Icon(
               Icons.arrow_back_ios,
               size: 25,
-              color: Color.fromARGB(255, 91, 132, 130),
+              color: Colors.cyan,
             ),
             Text(
               "Radio Button",
               style: TextStyle(
-                color: Color.fromARGB(255, 86, 114, 118),
+                color: Colors.cyan,
                 fontSize: 25.0
               ),
             ),
             Icon(
               Icons.menu,
               size: 25.0,
-              color: Color.fromARGB(255, 67, 109, 120),
+              color: Color.fromARGB(255, 228, 9, 221),
             ),
           ]
         ),

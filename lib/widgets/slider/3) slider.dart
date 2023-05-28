@@ -13,7 +13,6 @@ class _SliderSmoothColorPageState extends State<SliderSmoothColorPage> {
     Color? getColorFromValue(double value) {
       return Color.lerp(Colors.red, Colors.green, value);
     }
-
     return Scaffold(
       appBar: AppBar(
         title: Text('Slider Color Example'),

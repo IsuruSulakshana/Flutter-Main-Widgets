@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_main_widgets/widgets/buttons/flatButton.dart';
 import 'package:flutter_main_widgets/widgets/customAppBar.dart/customAppBar.dart';
 import 'package:flutter_main_widgets/widgets/radio/2)radio.dart';
+import 'package:flutter_main_widgets/widgets/slider/1)%20slider.dart';
+import 'package:flutter_main_widgets/widgets/slider/4)%20slider.dart';
 
 class WidgetOfTheDay extends StatelessWidget {
   const WidgetOfTheDay({Key? key}) : super(key: key);
@@ -292,9 +294,12 @@ class _WidgetOfTheDayBannerState extends State<WidgetOfTheDayBanner>
                 )
               ),
           const Positioned(
-                top: 200,
+                top: 150,
                 left: 5,
-                child: MyRadio(),
+                child: SizedBox(
+                  width: 380.0,
+                  child: MySlider()
+                ),
               ),
           AnimatedBuilder(
           animation: _animation,
@@ -319,7 +324,7 @@ class _WidgetOfTheDayBannerState extends State<WidgetOfTheDayBanner>
                     vertical: 8,
                   ),
                   child: const Text(
-                    "Radio Button",
+                    "Slider",
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -369,7 +374,7 @@ class _WidgetOfTheDayBannerState extends State<WidgetOfTheDayBanner>
                         top: 60.0,
                         left: 70.0,
                         child: Text(
-                    "5",
+                    "10",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 30.0,
