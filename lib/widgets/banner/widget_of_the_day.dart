@@ -298,7 +298,7 @@ class _WidgetOfTheDayBannerState extends State<WidgetOfTheDayBanner>
                 left: 5,
                 child: SizedBox(
                   width: 380.0,
-                  child: MySlider()
+                  child: SliderBar(),
                 ),
               ),
           AnimatedBuilder(
@@ -396,3 +396,19 @@ class _WidgetOfTheDayBannerState extends State<WidgetOfTheDayBanner>
 }
 
 
+class SliderBar extends StatelessWidget {
+  const SliderBar({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        MySlider(),
+        SizedBox(height: 10.0,),
+        MySlider(),
+        SizedBox(height: 10.0,),
+        MySlider(),
+      ],
+    );
+  }
+}

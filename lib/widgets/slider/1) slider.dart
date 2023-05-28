@@ -8,8 +8,8 @@ class SliderPage extends StatefulWidget {
 }
 
 class _SliderPageState extends State<SliderPage> {
-  double _value = 0.0;
 
+  double _value = 0.0;
   void _updateValue(double newValue) {
     setState(() {
       _value = newValue;
@@ -31,6 +31,7 @@ class _SliderPageState extends State<SliderPage> {
               style: TextStyle(fontSize: 20),
             ),
             SizedBox(height: 20),
+
             Slider(
               value: _value,
               min: 0.0,

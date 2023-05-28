@@ -24,7 +24,7 @@ class CustomAppBar extends StatelessWidget {
               color: Colors.cyan,
             ),
             Text(
-              "Radio Button",
+              "Slider",
               style: TextStyle(
                 color: Colors.cyan,
                 fontSize: 25.0
