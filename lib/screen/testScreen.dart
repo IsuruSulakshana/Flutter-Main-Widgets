@@ -16,26 +16,27 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        foregroundColor: Color.fromARGB(255, 252, 251, 251),
-        shadowColor: Color.fromARGB(255, 58, 185, 240),
-        backgroundColor: Color.fromARGB(255, 23, 95, 108),
-        centerTitle: true,
-        title: const Text(
-          "Grid View",
-          style: TextStyle(
-            fontSize: 22.0,
-            color: Color.fromARGB(255, 46, 207, 235),
-          ),
-        ),
-        leading: const Icon(
-          Icons.arrow_back_ios,
-          size: 22.0,
-          color: Color.fromARGB(255, 46, 207, 235),
-        ),
-      ),
-      body: GridViewExample(),
-      backgroundColor: Color.fromARGB(255, 46, 207, 235),
+      body: const WidgetOfTheDayBanner(),
+      // appBar: AppBar(
+      //   foregroundColor: Color.fromARGB(255, 252, 251, 251),
+      //   shadowColor: Color.fromARGB(255, 58, 185, 240),
+      //   backgroundColor: Color.fromARGB(255, 23, 95, 108),
+      //   centerTitle: true,
+      //   title: const Text(
+      //     "Grid View",
+      //     style: TextStyle(
+      //       fontSize: 22.0,
+      //       color: Color.fromARGB(255, 46, 207, 235),
+      //     ),
+      //   ),
+      //   leading: const Icon(
+      //     Icons.arrow_back_ios,
+      //     size: 22.0,
+      //     color: Color.fromARGB(255, 46, 207, 235),
+      //   ),
+      // ),
+      // body: GridViewExample(),
+      // backgroundColor: Color.fromARGB(255, 46, 207, 235),
     );
   }
 }
