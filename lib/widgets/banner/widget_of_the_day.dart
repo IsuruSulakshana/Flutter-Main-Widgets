@@ -298,7 +298,7 @@ class _WidgetOfTheDayBannerState extends State<WidgetOfTheDayBanner>
                 left: 5,
                 child: SizedBox(
                   width: 380.0,
-                  child: SliderBar(),
+                  child: MyRadio(),
                 ),
               ),
           AnimatedBuilder(

@@ -19,11 +19,15 @@ import 'package:flutter_main_widgets/widgets/scaffold/scaffold.dart';
 
 
 import 'package:device_preview/device_preview.dart';
+import 'package:flutter_main_widgets/widgets/slider/1)%20slider.dart';
+import 'package:flutter_main_widgets/widgets/slider/2)%20slider.dart';
 import 'package:flutter_main_widgets/widgets/slider/5)%20slider.dart';
 import 'package:flutter_main_widgets/widgets/tabBar/1)tabBar.dart';
 import 'package:flutter_main_widgets/widgets/tabBar/2)tabView.dart';
 import 'package:flutter_main_widgets/widgets/tabBar/3)tabBar.dart';
 import 'package:flutter_main_widgets/widgets/tabBar/4)tabBar.dart';
+
+import 'widgets/slider/3) slider.dart';
 
 void main() => runApp(
   DevicePreview(
